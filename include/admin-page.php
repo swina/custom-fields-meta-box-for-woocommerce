@@ -46,17 +46,19 @@ function mg_wc_cfmb_edit(){
       $options = [];
 
       foreach (array_keys($_POST) as $field){
-        //echo $field.'<br>';
-        if ( strpos($field,'name_') > -1 ){
-          $name = str_replace('name_','',$field);
-          $a = array (
-            'name' => $name,
-            'label' => $_POST['label_'.$name],
-            'active' => esc_attr($_POST['active_'.$name]) == 'on' ? '1':'0',
-            'meta'  => esc_attr($_POST['meta_'.$name]) == 'on' ? '1' : '0'
-          );
-          array_push($options,$a);
-        }
+        echo $field;
+
+          if ( strpos($field,'name_') > -1 ){
+            $name = str_replace('name_','',$field);
+            $a = array (
+              'name' => $name,
+              'label' => $_POST['label_'.$name],
+              'active' => esc_attr($_POST['active_'.$name]) == 'on' ? '1':'0',
+              'meta'  => esc_attr($_POST['meta_'.$name]) == 'on' ? '1' : '0'
+            );
+            array_push($options,$a);
+          }
+        
       }
       if ( isset($_POST['custom_tab_description']) ){
         $a = array (

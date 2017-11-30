@@ -22,14 +22,11 @@ if ( is_admin() ) {
 
 
   function plugin_mg_wc_cfmb_activation(){
-    update_option('mg_wc_cfmb');
+    update_option('mg_wc_cfmb','');
   }
 
   register_activation_hook( __FILE__, 'plugin_mg_wc_cfmb_activation' );
   register_deactivation_hook( __FILE__, 'plugin_mg_wc_cfmb_deactivation' );
-
-
-
 }
 
 

@@ -17,7 +17,7 @@ if ( !defined( 'ABSPATH' ) ) exit;?>
   <form method="POST">
   <input type="hidden" name="mg_wc_cfmb_save" value="1">
   <input type="hidden" name="custom_tab_desription_init" value="on">
-  <input type="hidden" name="custom_tab_name_init" value="Description">
+  <input type="hidden" name="custom_tab_init" value="Description">
   <tr>
     <td colspan="3">
       <small style="color:red">No custom fields defined</small>
