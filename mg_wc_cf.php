@@ -2,11 +2,11 @@
 /**
 * Plugin Name: Moodgiver Products Custom Fields MetaBox for Woocommerce
 * Plugin URI: http://www.moodgiver.com/
-* Description: This plugin adds a MetaBox to products using product attributes as custom fields. You can use same fields for every product type and it doesn't alter or change variations. Disable visible option if you are using as attribute.
-* Version: 1.0.0
+* Description: Add custom rich text fields to Woocommerce products using a practical metabox. Edit your custom fields with the wysiwys editor (inserting media). This is a beta version you should test in a development environment before to use. Custom Fields MetaBox for Woocommerce is free to use 
+* Version: beta 1.0.0
 * Author: Antonio Nardone
-* Author URI: http://www.moodgiver.com/
-* License: GPL2
+* Author URI: http://www.antonionardone.com/
+* License: GPL3
 * Date: november 2017
 */
 
