@@ -4,3 +4,5 @@
 .btn-cf:hover {
   color: #4f76a7;
 }
+
+.product_custom_field p label { display:block!important;width:100%;font-weight:bold; }

@@ -1,12 +1,7 @@
-<style>
-  .product_custom_field p label { display:block!important;width:100%;font-weight:bold; }
-
-</style>
 <div class="product_custom_field">'
 <?php
 //display fields
 global $woocommerce, $post;
-wp_enqueue_script ('../assets/bootstrap/js/bootstrap.min.js');
 
 $options = get_option('mg_wc_cfmb');
 $settings = array(
