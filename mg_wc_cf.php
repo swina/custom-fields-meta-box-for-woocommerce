@@ -2,7 +2,7 @@
 /**
 * Plugin Name: Moodgiver Products Custom Fields MetaBox for Woocommerce
 * Plugin URI: http://www.moodgiver.com/
-* Description: Add custom rich text fields to Woocommerce products using a practical metabox. Edit your custom fields with the wysiwys editor (inserting media). This is a beta version you should test in a development environment before to use. Custom Fields MetaBox for Woocommerce is free to use 
+* Description: Add custom rich text fields to Woocommerce products using a practical metabox. Edit your custom fields with the wysiwys editor (inserting media). This is a beta version you should test in a development environment before to use. Custom Fields MetaBox for Woocommerce is free to use
 * Version: beta 1.0.0
 * Author: Antonio Nardone
 * Author URI: http://www.antonionardone.com/
@@ -166,7 +166,7 @@ function woocommerce_product_custom_fields_save($post_id)
 add_action('woocommerce_product_meta_end' , 'wc_cfmb_meta' , 60);
 
 //frontend display custom fields (tab)
-add_filter( 'woocommerce_product_tabs', 'wpb_new_product_tab' );
+add_filter( 'woocommerce_product_tabs', 'mg_cf_new_product_tab' );
 
 $options = get_option('mg_wc_cfmb');
 if ( $options ){
@@ -186,7 +186,7 @@ function woo_remove_product_tabs($tabs){
 }
 
 //create new tab
-function wpb_new_product_tab( $tabs ) {
+function mg_cf_new_product_tab( $tabs ) {
     // Add the new tab
     //$title = get_option('mg_aacf_tab_name');
     //$options = get_option('mg_wc_cfmb');
@@ -201,7 +201,7 @@ function wpb_new_product_tab( $tabs ) {
     $tabs['custom_fields'] = array(
         'title'       => __( $tab_name , 'text-domain' ),
         'priority'    => 0,
-        'callback'    => 'wpb_new_product_tab_content'
+        'callback'    => 'mg_cf_new_product_tab_content'
     );
     return $tabs;
   } else {
@@ -211,7 +211,7 @@ function wpb_new_product_tab( $tabs ) {
 
 
 //output to tab
-function wpb_new_product_tab_content() {
+function mg_cf_new_product_tab_content() {
   $options = get_option('mg_wc_cfmb');
   if ( $options ){
   foreach ( $options AS $key=>$option ) {
